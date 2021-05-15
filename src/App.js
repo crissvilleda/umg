@@ -69,7 +69,7 @@ function App() {
   };
 
   return (
-    <Container>
+    <Container className="px-4" >
       <br />
       <br />
       <Row className="d-flex justify-content-center">
@@ -104,13 +104,26 @@ function App() {
           </Form>
           <br />
           <br />
-
-          <span>Resultado: </span>
-          <span className="text-danger">{resultado}</span>
+          <Row>
+            <Col>
+              <span>Resultado: </span>
+            </Col>
+            <Col>
+              <span className="text-danger font-weight-bold">{resultado}</span>
+            </Col>
+          </Row>
+          <br />
+          <br />
+          <br />
           <br />
           <br />
           <Row>
-            <span className="text-info px-2">Denis Heberto Crisostomo Villeda</span>
+            <span className="text-dark px-2">Creado por:</span>
+          </Row>
+          <Row>
+            <span className="text-info px-2">
+              Denis Heberto Crisostomo Villeda
+            </span>
           </Row>
           <Row>
             <span className="text-info px-2">Karla Sánchez Borrayes</span>
