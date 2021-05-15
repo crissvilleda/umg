@@ -71,16 +71,21 @@ function App() {
 
   return (
     <Container>
-        <br />
-        <br />
-      <Row className="justify-content-center">
-        <div className="div-title">
-          <p> Pasar de infijo a posfijo </p>
-          <img className="logo" src={umgIcono} alt="Único umg" />
-          <br />
-        </div>
+      <br />
+      <br />
+      <Row className="d-flex justify-content-center">
+        <Col md="6" lg="5">
+          <Row>
+            <Col>
+              <img className="logo" src={umgIcono} alt="Único umg" />
+            </Col>
+            <Col className="d-flex align-content-center align-items-center" >
+              <h4> Pasar expresiones de Infijo a Posfijo </h4>
+            </Col>
+          </Row>
+        </Col>
       </Row>
-      <Row className="justify-content-center">
+      <Row className="justify-content-center mt-2">
         <Col md="6" lg="5">
           <Form onSubmit={onSubmit}>
             <div className="justify-content-start">
@@ -103,8 +108,8 @@ function App() {
           <br />
           <br />
 
-          <span>Resultado:</span>
-          <span>{resultado}</span>
+          <span>Resultado:   </span>
+          <span className="text-danger" >{resultado}</span>
         </Col>
       </Row>
     </Container>
