@@ -9,11 +9,11 @@ function App() {
 
   const onSubmit = (e) => {
     const operadores = ["+", "-", "*", "/", "^", "(", ")"];
-    const sufijo = Array.from(value);
+    const infija = Array.from(value);
     const posfija = [];
     let pila = [];
 
-    sufijo.forEach((item) => {
+    infija.forEach((item) => {
       if (operadores.includes(item)) {
         if (item !== ")") {
           if (pila.length > 0) {
