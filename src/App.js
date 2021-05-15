@@ -1,4 +1,3 @@
-import "./App.css";
 import { useState } from "react";
 import umgIcono from "./umg.png";
 import { Button, Form, Container, Row, Col } from "react-bootstrap";
@@ -79,7 +78,7 @@ function App() {
             <Col>
               <img className="logo" src={umgIcono} alt="Único umg" />
             </Col>
-            <Col className="d-flex align-content-center align-items-center" >
+            <Col className="d-flex align-content-center align-items-center">
               <h4> Pasar expresiones de Infijo a Posfijo </h4>
             </Col>
           </Row>
@@ -108,8 +107,19 @@ function App() {
           <br />
           <br />
 
-          <span>Resultado:   </span>
-          <span className="text-danger" >{resultado}</span>
+          <span>Resultado: </span>
+          <span className="text-danger">{resultado}</span>
+          <br />
+          <br />
+          <Row>
+            <span className="text-info px-2">Denis Heberto Crisostomo Villeda</span>
+          </Row>
+          <Row>
+            <span className="text-info px-2">Karla Sánchez Borrayes</span>
+          </Row>
+          <Row>
+            <span className="text-info px-2">Edwin Antonio Lopez Tema</span>
+          </Row>
         </Col>
       </Row>
     </Container>
