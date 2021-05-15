@@ -1,5 +1,8 @@
 import "./App.css";
 import { useState } from "react";
+import umgIcono from "./umg.png";
+import { Button, Form, Container, Row, Col } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   const [value, setValue] = useState("");
@@ -41,11 +44,6 @@ function App() {
         posfija.push(item);
       }
     });
-
-    // pila = pila.filter((item) => {
-    //   if (item === "(") return false;
-    //   return true;
-    // });
     while (pila.length > 0) {
       const dato = pila.pop();
       posfija.push(dato);
@@ -72,31 +70,44 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <div>
-        <p> Pasar de infijo a posfijo </p>
-        <br />
-      </div>
-      <form onSubmit={onSubmit}>
-        <label>
-          Infija:
-          <input
-            type="text"
-            name="infija"
-            value={value}
-            onChange={(e) => setValue(e.target.value)}
-          />
-        </label>
+    <Container>
         <br />
         <br />
-        <button type="submit">Pasar a posfija</button>
-        <br />
-        <br />
+      <Row className="justify-content-center">
+        <div className="div-title">
+          <p> Pasar de infijo a posfijo </p>
+          <img className="logo" src={umgIcono} alt="Único umg" />
+          <br />
+        </div>
+      </Row>
+      <Row className="justify-content-center">
+        <Col md="6" lg="5">
+          <Form onSubmit={onSubmit}>
+            <div className="justify-content-start">
+              <Form.Label className="text-left">Expresión infija:</Form.Label>
+            </div>
+            <Form.Control
+              type="text"
+              name="infija"
+              value={value}
+              placeholder="ingrese expresión"
+              onChange={(e) => setValue(e.target.value)}
+            />
 
-        <span>Resultado:</span>
-        <span>{resultado}</span>
-      </form>
-    </div>
+            <br />
+            <br />
+            <Button type="submit" variant="primary">
+              Pasar a posfija
+            </Button>
+          </Form>
+          <br />
+          <br />
+
+          <span>Resultado:</span>
+          <span>{resultado}</span>
+        </Col>
+      </Row>
+    </Container>
   );
 }
 
