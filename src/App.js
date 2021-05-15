@@ -45,7 +45,7 @@ function App() {
     });
     while (pila.length > 0) {
       const dato = pila.pop();
-      if(dato !== "(")posfija.push(dato);
+      if (dato !== "(") posfija.push(dato);
     }
 
     // Set Resultado
@@ -69,7 +69,7 @@ function App() {
   };
 
   return (
-    <Container className="px-4" >
+    <Container className="px-4">
       <br />
       <br />
       <Row className="d-flex justify-content-center">
@@ -99,7 +99,7 @@ function App() {
             />
             <br />
             <Button type="submit" variant="primary">
-              Pasar a posfija
+              Pasar a Posfija
             </Button>
           </Form>
           <br />
