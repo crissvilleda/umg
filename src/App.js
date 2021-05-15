@@ -45,7 +45,7 @@ function App() {
     });
     while (pila.length > 0) {
       const dato = pila.pop();
-      posfija.push(dato);
+      if(dato !== "(")posfija.push(dato);
     }
 
     // Set Resultado
