@@ -97,8 +97,6 @@ function App() {
               placeholder="ingrese expresión"
               onChange={(e) => setValue(e.target.value)}
             />
-
-            <br />
             <br />
             <Button type="submit" variant="primary">
               Pasar a posfija
